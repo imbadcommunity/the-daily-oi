@@ -12,6 +12,7 @@ import {
   Check,
   Users,
   Network,
+  Wrench,
   Menu,
   X,
 } from "lucide-react";
@@ -121,6 +122,7 @@ function Navbar() {
 
   const links = [
     { href: "#aprende", label: "O que você aprende" },
+    { href: "#ferramentas", label: "Ferramentas" },
     { href: "#bonus", label: "Bônus" },
     { href: "#comunidade", label: "Comunidade" },
     { href: "#faq", label: "FAQ" },
