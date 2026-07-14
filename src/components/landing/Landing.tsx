@@ -139,10 +139,12 @@ function Navbar() {
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <a href="#top" className="flex items-center gap-2.5">
-          <div className="relative h-8 w-8 overflow-hidden rounded-lg bg-gradient-to-br from-[#e85d3a] to-[#6b3520] ring-1 ring-white/10">
-            <span className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.5),transparent_50%)]" />
-          </div>
-          <span className="font-display text-xl tracking-tight text-white">Creators</span>
+          <img
+            src={creatorsLogo.url}
+            alt="Creators"
+            className="h-9 w-auto select-none"
+            draggable={false}
+          />
         </a>
         <nav className="hidden items-center gap-8 md:flex">
           {links.map((l) => (
