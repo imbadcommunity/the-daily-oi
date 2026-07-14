@@ -77,14 +77,20 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Creators — Aprenda a criar sites com IA" },
+      {
+        name: "description",
+        content:
+          "Comunidade Creators: domine o Lovable, crie sites e aplicações com IA e transforme essa habilidade em um serviço profissional.",
+      },
+      { property: "og:title", content: "Creators — Aprenda a criar sites com IA" },
+      {
+        property: "og:description",
+        content:
+          "Domine o Lovable do zero ao profissional e aprenda a oferecer esse serviço a empresas.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
       {
