@@ -633,24 +633,24 @@ function Tools() {
         "Prospectador inteligente para encontrar leads qualificados e acelerar sua captação de clientes.",
       href: "#",
       cta: "Acessar LeadHunter",
-      badge: "Incluído",
+      badge: "Acesso avulso",
     },
     {
       icon: Sparkles,
       name: "Extensão Lovable Ilimitado",
       description:
-        "Extensão que libera o uso do Lovable para os membros da comunidade.",
+        "Extensão que libera o uso ilimitado do Lovable, sem consumir créditos.",
       href: "https://ilimitadolovable.lovable.app",
       cta: "Acessar Ferramenta",
-      badge: "Incluído",
+      badge: "Acesso avulso",
     },
   ];
   return (
     <Section
       id="ferramentas"
       eyebrow="Ferramentas"
-      title="Ferramentas da comunidade"
-      description="Recursos exclusivos disponíveis para os membros, feitos para acelerar seus projetos e remover limites técnicos."
+      title="Ferramentas avulsas"
+      description="Não quer entrar na comunidade? Você também pode adquirir o acesso individual a cada uma das ferramentas."
     >
       <div className="mx-auto grid max-w-4xl grid-cols-1 gap-6 md:grid-cols-1">
         {tools.map((t, i) => (
