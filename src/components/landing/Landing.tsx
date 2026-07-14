@@ -12,7 +12,7 @@ import {
   Check,
   Users,
   Network,
-  Wrench,
+  Target,
   Menu,
   X,
 } from "lucide-react";
@@ -542,14 +542,30 @@ function Bonus() {
               <Sparkles size={12} /> Bônus Exclusivo
             </span>
             <h3 className="mt-5 font-display text-4xl leading-tight text-white md:text-5xl">
-              Extensão <em className="italic text-[#e85d3a]">Lovable Unlimited</em>
+              Tudo <em className="italic text-[#e85d3a]">incluído</em> na comunidade
             </h3>
             <p className="mt-5 max-w-xl text-base leading-relaxed text-white/70">
-              Os membros da comunidade recebem acesso à extensão que permite utilizar o Lovable de
-              forma ilimitada, sem consumir créditos da plataforma.
+              Ao entrar na Creators, você recebe acesso gratuito ao{" "}
+              <span className="text-white">LeadHunter</span> (prospectador de leads) e à{" "}
+              <span className="text-white">Extensão Lovable Ilimitado</span> — sem custo
+              adicional, apenas por ser membro da comunidade.
             </p>
+            <ul className="mt-6 space-y-2.5">
+              {[
+                "Acesso completo ao LeadHunter",
+                "Extensão Lovable Ilimitado sem consumo de créditos",
+                "Atualizações e novas ferramentas incluídas",
+              ].map((b) => (
+                <li key={b} className="flex items-center gap-2.5 text-sm text-white/75">
+                  <span className="grid h-5 w-5 place-items-center rounded-full border border-[#e85d3a]/40 bg-[#e85d3a]/15 text-[#e85d3a]">
+                    <Check size={12} />
+                  </span>
+                  {b}
+                </li>
+              ))}
+            </ul>
           </div>
-          <PrimaryCTA size="lg">Quero o bônus</PrimaryCTA>
+          <PrimaryCTA size="lg">Quero os bônus</PrimaryCTA>
         </div>
       </motion.div>
     </section>
@@ -607,6 +623,15 @@ function ForWho() {
 
 function Tools() {
   const tools = [
+    {
+      icon: Target,
+      name: "LeadHunter",
+      description:
+        "Prospectador inteligente para encontrar leads qualificados e acelerar sua captação de clientes. Acesso liberado para membros da Creators.",
+      href: "#",
+      cta: "Acessar LeadHunter",
+      badge: "Incluído",
+    },
     {
       icon: Sparkles,
       name: "Extensão Lovable Ilimitado",
@@ -872,9 +897,9 @@ export function Landing() {
           <About />
           <Learn />
           <Method />
+          <Tools />
           <Bonus />
           <Community />
-          <Tools />
           <ForWho />
           <Differentials />
           <FAQ />
