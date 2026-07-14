@@ -633,7 +633,7 @@ function Tools() {
         "Prospectador inteligente para encontrar leads qualificados e acelerar sua captação de clientes.",
       href: "#",
       cta: "Acessar LeadHunter",
-      badge: "Incluído",
+      badge: "Acesso avulso",
     },
     {
       icon: Sparkles,
@@ -642,7 +642,7 @@ function Tools() {
         "Extensão que libera o uso do Lovable para os membros da comunidade.",
       href: "https://ilimitadolovable.lovable.app",
       cta: "Acessar Ferramenta",
-      badge: "Incluído",
+      badge: "Acesso avulso",
     },
   ];
   return (
