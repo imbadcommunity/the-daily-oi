@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import creatorsLogo from "@/assets/creators-logo.jpeg.asset.json";
 import {
   ArrowRight,
   ArrowUpRight,
