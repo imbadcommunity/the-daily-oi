@@ -140,7 +140,7 @@ function Navbar() {
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <a href="#top" className="flex items-center gap-2.5">
           <img
-            src={creatorsLogo.url}
+            src={creatorsLogo}
             alt="Creators"
             className="h-14 w-auto select-none md:h-16"
             draggable={false}
@@ -870,7 +870,7 @@ function Footer() {
     <footer className="border-t border-white/8">
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 px-6 py-10 md:flex-row">
         <img
-          src={creatorsLogo.url}
+          src={creatorsLogo}
           alt="Creators"
           className="h-12 w-auto select-none"
           draggable={false}
