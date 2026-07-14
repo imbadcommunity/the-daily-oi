@@ -639,7 +639,7 @@ function Tools() {
       icon: Sparkles,
       name: "Extensão Lovable Ilimitado",
       description:
-        "Extensão que libera o uso do Lovable para os membros da comunidade.",
+        "Extensão que libera o uso ilimitado do Lovable, sem consumir créditos.",
       href: "https://ilimitadolovable.lovable.app",
       cta: "Acessar Ferramenta",
       badge: "Acesso avulso",
