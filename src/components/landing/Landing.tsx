@@ -12,7 +12,7 @@ import {
   Check,
   Users,
   Network,
-  Wrench,
+  Target,
   Menu,
   X,
 } from "lucide-react";
