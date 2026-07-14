@@ -12,6 +12,7 @@ import {
   Check,
   Users,
   Network,
+  Wrench,
   Menu,
   X,
 } from "lucide-react";
@@ -121,6 +122,7 @@ function Navbar() {
 
   const links = [
     { href: "#aprende", label: "O que você aprende" },
+    { href: "#ferramentas", label: "Ferramentas" },
     { href: "#bonus", label: "Bônus" },
     { href: "#comunidade", label: "Comunidade" },
     { href: "#faq", label: "FAQ" },
@@ -600,6 +602,96 @@ function Community() {
 }
 
 function ForWho() {
+  return _ForWho();
+}
+
+function Tools() {
+  const tools = [
+    {
+      icon: Sparkles,
+      name: "Extensão Lovable Ilimitado",
+      description:
+        "Utilize o Lovable de forma ilimitada, sem consumir créditos da plataforma. Exclusivo para membros da comunidade.",
+      href: "https://ilimitadolovable.lovable.app",
+      cta: "Acessar Ferramenta",
+      badge: "Incluído",
+    },
+  ];
+  return (
+    <Section
+      id="ferramentas"
+      eyebrow="Ferramentas"
+      title="Ferramentas da comunidade"
+      description="Recursos exclusivos disponíveis para os membros, feitos para acelerar seus projetos e remover limites técnicos."
+    >
+      <div className="mx-auto grid max-w-4xl grid-cols-1 gap-6 md:grid-cols-1">
+        {tools.map((t, i) => (
+          <motion.div
+            key={t.name}
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 0.6, delay: i * 0.06, ease: easeOut }}
+            className="relative overflow-hidden rounded-2xl border border-white/10 p-8 backdrop-blur-xl md:p-10"
+            style={{
+              background:
+                "linear-gradient(135deg, rgba(45,24,16,0.9) 0%, rgba(26,26,26,0.9) 60%, rgba(59,29,16,0.9) 100%)",
+              boxShadow:
+                "0 40px 90px -30px rgba(232,93,58,0.4), inset 0 1px 0 rgba(255,255,255,0.05)",
+            }}
+          >
+            <div
+              aria-hidden
+              className="pointer-events-none absolute inset-0 opacity-[0.1]"
+              style={{ backgroundImage: `url("${GRAIN}")`, backgroundSize: "200px 200px" }}
+            />
+            <div
+              aria-hidden
+              className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full opacity-50 blur-3xl"
+              style={{ background: "radial-gradient(circle, #e85d3a 0%, transparent 60%)" }}
+            />
+            <div className="relative flex flex-col items-start gap-6 md:flex-row md:items-center md:justify-between">
+              <div className="flex items-start gap-5">
+                <div className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl border border-[#e85d3a]/30 bg-gradient-to-br from-[#e85d3a]/25 to-transparent text-[#e85d3a]">
+                  <t.icon size={26} />
+                </div>
+                <div>
+                  <div className="flex items-center gap-2">
+                    <h3 className="font-display text-2xl leading-snug text-white md:text-3xl">
+                      {t.name}
+                    </h3>
+                    <span className="rounded-full border border-[#e85d3a]/40 bg-[#e85d3a]/10 px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-[0.18em] text-[#f2a58a]">
+                      {t.badge}
+                    </span>
+                  </div>
+                  <p className="mt-3 max-w-xl text-[15px] leading-relaxed text-white/65">
+                    {t.description}
+                  </p>
+                </div>
+              </div>
+              <a
+                href={t.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative inline-flex shrink-0 items-center justify-center gap-2 rounded-full bg-[#e85d3a] px-7 py-3.5 text-sm font-semibold text-[#1a1a1a] shadow-[0_20px_60px_-20px_rgba(232,93,58,0.7),inset_0_1px_0_rgba(255,255,255,0.35)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_28px_70px_-15px_rgba(232,93,58,0.8),inset_0_1px_0_rgba(255,255,255,0.45)]"
+              >
+                <span
+                  aria-hidden
+                  className="absolute inset-0 rounded-full opacity-70"
+                  style={{ background: "linear-gradient(180deg, rgba(255,255,255,0.25), transparent 40%)" }}
+                />
+                <span className="relative">{t.cta}</span>
+                <ArrowUpRight size={16} className="relative transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              </a>
+            </div>
+          </motion.div>
+        ))}
+      </div>
+    </Section>
+  );
+}
+
+function _ForWho() {
   const items = [
     "Quem quer aprender uma habilidade digital prática",
     "Iniciantes interessados em IA e desenvolvimento",
@@ -782,6 +874,7 @@ export function Landing() {
           <Method />
           <Bonus />
           <Community />
+          <Tools />
           <ForWho />
           <Differentials />
           <FAQ />
