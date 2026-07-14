@@ -630,7 +630,7 @@ function Tools() {
       icon: Target,
       name: "LeadHunter",
       description:
-        "Prospectador inteligente para encontrar leads qualificados e acelerar sua captação de clientes. Acesso liberado para membros da Creators.",
+        "Prospectador inteligente para encontrar leads qualificados e acelerar sua captação de clientes.",
       href: "#",
       cta: "Acessar LeadHunter",
       badge: "Incluído",
@@ -639,7 +639,7 @@ function Tools() {
       icon: Sparkles,
       name: "Extensão Lovable Ilimitado",
       description:
-        "Utilize o Lovable de forma ilimitada, sem consumir créditos da plataforma. Exclusivo para membros da comunidade.",
+        "Extensão que libera o uso do Lovable para os membros da comunidade.",
       href: "https://ilimitadolovable.lovable.app",
       cta: "Acessar Ferramenta",
       badge: "Incluído",
