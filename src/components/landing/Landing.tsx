@@ -874,6 +874,7 @@ export function Landing() {
           <Method />
           <Bonus />
           <Community />
+          <Tools />
           <ForWho />
           <Differentials />
           <FAQ />
