@@ -608,6 +608,15 @@ function ForWho() {
 function Tools() {
   const tools = [
     {
+      icon: Target,
+      name: "LeadHunter",
+      description:
+        "Prospectador inteligente para encontrar leads qualificados e acelerar sua captação de clientes. Acesso liberado para membros da Creators.",
+      href: "#",
+      cta: "Acessar LeadHunter",
+      badge: "Incluído",
+    },
+    {
       icon: Sparkles,
       name: "Extensão Lovable Ilimitado",
       description:
