@@ -649,8 +649,8 @@ function Tools() {
     <Section
       id="ferramentas"
       eyebrow="Ferramentas"
-      title="Ferramentas da comunidade"
-      description="Recursos exclusivos disponíveis para os membros, feitos para acelerar seus projetos e remover limites técnicos."
+      title="Ferramentas avulsas"
+      description="Não quer entrar na comunidade? Você também pode adquirir o acesso individual a cada uma das ferramentas."
     >
       <div className="mx-auto grid max-w-4xl grid-cols-1 gap-6 md:grid-cols-1">
         {tools.map((t, i) => (
