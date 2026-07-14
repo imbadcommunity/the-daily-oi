@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import creatorsLogo from "@/assets/creators-logo.jpeg.asset.json";
+import creatorsLogo from "@/assets/creators-logo.png";
 import {
   ArrowRight,
   ArrowUpRight,
@@ -140,9 +140,9 @@ function Navbar() {
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <a href="#top" className="flex items-center gap-2.5">
           <img
-            src={creatorsLogo.url}
+            src={creatorsLogo}
             alt="Creators"
-            className="h-14 w-auto select-none md:h-16"
+            className="h-32 w-auto select-none md:h-40"
             draggable={false}
           />
         </a>
@@ -870,9 +870,9 @@ function Footer() {
     <footer className="border-t border-white/8">
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 px-6 py-10 md:flex-row">
         <img
-          src={creatorsLogo.url}
+          src={creatorsLogo}
           alt="Creators"
-          className="h-12 w-auto select-none"
+          className="h-24 w-auto select-none md:h-28"
           draggable={false}
         />
         <nav className="flex flex-wrap items-center justify-center gap-6 text-sm text-white/50">
