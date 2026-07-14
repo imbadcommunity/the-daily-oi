@@ -142,7 +142,7 @@ function Navbar() {
           <img
             src={creatorsLogo.url}
             alt="Creators"
-            className="h-9 w-auto select-none"
+            className="h-14 w-auto select-none md:h-16"
             draggable={false}
           />
         </a>
@@ -872,7 +872,7 @@ function Footer() {
         <img
           src={creatorsLogo.url}
           alt="Creators"
-          className="h-8 w-auto select-none"
+          className="h-12 w-auto select-none"
           draggable={false}
         />
         <nav className="flex flex-wrap items-center justify-center gap-6 text-sm text-white/50">
