@@ -869,12 +869,12 @@ function Footer() {
   return (
     <footer className="border-t border-white/8">
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 px-6 py-10 md:flex-row">
-        <div className="flex items-center gap-2.5">
-          <div className="relative h-7 w-7 overflow-hidden rounded-md bg-gradient-to-br from-[#e85d3a] to-[#6b3520] ring-1 ring-white/10">
-            <span className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.5),transparent_50%)]" />
-          </div>
-          <span className="font-display text-lg text-white">Creators</span>
-        </div>
+        <img
+          src={creatorsLogo.url}
+          alt="Creators"
+          className="h-8 w-auto select-none"
+          draggable={false}
+        />
         <nav className="flex flex-wrap items-center justify-center gap-6 text-sm text-white/50">
           <a href="#" className="hover:text-white">Política de Privacidade</a>
           <a href="#" className="hover:text-white">Termos de Uso</a>
