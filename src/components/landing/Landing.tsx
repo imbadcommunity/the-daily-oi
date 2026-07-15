@@ -631,7 +631,7 @@ function Tools() {
       name: "LeadHunter",
       description:
         "Prospectador inteligente para encontrar leads qualificados e acelerar sua captação de clientes.",
-      href: "#",
+      href: "https://leadhuntercreators.lovable.app/",
       cta: "Acessar LeadHunter",
       badge: "Acesso avulso",
     },
