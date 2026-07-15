@@ -897,10 +897,10 @@ export function Landing() {
         <Navbar />
         <main>
           <Hero />
+          <Tools />
           <About />
           <Learn />
           <Method />
-          <Tools />
           <Bonus />
           <Community />
           <ForWho />
