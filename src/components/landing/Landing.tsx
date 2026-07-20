@@ -39,17 +39,36 @@ function GrainOverlay() {
 
 function MeshBackdrop() {
   return (
-    <div aria-hidden className="pointer-events-none fixed inset-0 -z-10 overflow-hidden bg-[#1a1a1a]">
+    <div aria-hidden className="pointer-events-none fixed inset-0 -z-10 overflow-hidden bg-[#0d0d0f]">
+      {/* Subtle technical grid */}
       <div
-        className="absolute -top-40 -left-40 h-[560px] w-[560px] rounded-full opacity-70 blur-[120px]"
+        className="absolute inset-0 opacity-[0.035]"
+        style={{
+          backgroundImage:
+            "linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px)",
+          backgroundSize: "64px 64px",
+          maskImage:
+            "radial-gradient(ellipse 90% 70% at 50% 30%, black 40%, transparent 90%)",
+        }}
+      />
+      {/* Vignette base */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            "radial-gradient(ellipse 100% 70% at 50% 0%, rgba(232,93,58,0.06) 0%, transparent 60%)",
+        }}
+      />
+      <div
+        className="absolute -top-40 -left-40 h-[560px] w-[560px] rounded-full opacity-25 blur-[140px]"
         style={{ background: "radial-gradient(circle, #e85d3a 0%, transparent 60%)" }}
       />
       <div
-        className="absolute top-1/3 -right-40 h-[640px] w-[640px] rounded-full opacity-50 blur-[140px]"
+        className="absolute top-1/3 -right-40 h-[640px] w-[640px] rounded-full opacity-[0.14] blur-[160px]"
         style={{ background: "radial-gradient(circle, #f2a58a 0%, transparent 60%)" }}
       />
       <div
-        className="absolute bottom-0 left-1/4 h-[520px] w-[520px] rounded-full opacity-40 blur-[140px]"
+        className="absolute bottom-0 left-1/4 h-[520px] w-[520px] rounded-full opacity-20 blur-[160px]"
         style={{ background: "radial-gradient(circle, #6b3520 0%, transparent 65%)" }}
       />
     </div>
@@ -127,7 +146,7 @@ function Navbar() {
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "border-b border-white/5 bg-[#1a1a1a]/70 backdrop-blur-2xl"
+          ? "border-b border-white/[0.06] bg-[#0d0d0f]/70 backdrop-blur-2xl"
           : "border-b border-transparent"
       }`}
     >
@@ -163,7 +182,7 @@ function Navbar() {
         </button>
       </div>
       {open && (
-        <div className="border-t border-white/5 bg-[#1a1a1a]/95 backdrop-blur-2xl md:hidden">
+        <div className="border-t border-white/[0.06] bg-[#0d0d0f]/95 backdrop-blur-2xl md:hidden">
           <div className="mx-auto flex max-w-6xl flex-col gap-4 px-6 py-5">
             {links.map((l) => (
               <a
@@ -185,8 +204,8 @@ function Navbar() {
 
 function Eyebrow({ children }: { children: React.ReactNode }) {
   return (
-    <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 text-[11px] font-medium uppercase tracking-[0.2em] text-white/70 backdrop-blur-xl">
-      <span className="h-1 w-1 rounded-full bg-[#e85d3a]" />
+    <div className="inline-flex items-center gap-2.5 rounded-full border border-white/[0.08] bg-white/[0.02] px-3.5 py-1.5 text-[10px] font-light uppercase tracking-[0.32em] text-white/60 backdrop-blur-xl">
+      <span className="h-1 w-1 rounded-full bg-[#e85d3a]/80" />
       {children}
     </div>
   );
@@ -200,14 +219,14 @@ function Hero() {
           <Eyebrow>
             <Sparkles size={11} /> Comunidade Creators
           </Eyebrow>
-          <h1 className="mt-6 font-display text-[46px] leading-[1.02] tracking-tight text-white md:text-[68px]">
+          <h1 className="mt-7 font-display text-[44px] leading-[1.03] tracking-[-0.015em] text-white md:text-[68px]">
             As ferramentas que aceleram seus projetos no{" "}
             <em className="not-italic bg-gradient-to-br from-[#e85d3a] to-[#f2a58a] bg-clip-text text-transparent">
               Lovable
             </em>{" "}
             — e uma <em className="italic text-[#e85d3a]">comunidade</em> por trás.
           </h1>
-          <p className="mt-7 max-w-xl text-[17px] leading-relaxed text-white/65">
+          <p className="mt-7 max-w-xl text-[16px] font-light leading-[1.7] text-white/60">
             Extensão Lovable Ilimitado e LeadHunter, o prospectador de leads. Adquira cada
             ferramenta separadamente ou entre para a comunidade Creators e receba ambas de graça,
             junto ao grupo de networking.
@@ -217,7 +236,7 @@ function Hero() {
             <GhostCTA href="#ferramentas">Ver Ferramentas</GhostCTA>
           </div>
 
-          <div className="mt-12 flex items-center gap-6 text-xs uppercase tracking-[0.2em] text-white/40">
+          <div className="mt-14 flex items-center gap-6 text-[10px] font-light uppercase tracking-[0.35em] text-white/35">
             <span>Lovable Ilimitado</span>
             <span className="h-px flex-1 bg-white/10" />
             <span>LeadHunter</span>
@@ -349,14 +368,14 @@ function Section({
             <Eyebrow>{eyebrow}</Eyebrow>
           </div>
         )}
-        <h2 className="mt-5 font-display text-4xl leading-tight text-white md:text-5xl">
+        <h2 className="mt-6 font-display text-[36px] leading-[1.05] tracking-[-0.01em] text-white md:text-[52px]">
           {title}
         </h2>
         {description && (
-          <p className="mt-5 text-base leading-relaxed text-white/60">{description}</p>
+          <p className="mt-6 text-[15px] leading-relaxed font-light text-white/55">{description}</p>
         )}
       </motion.div>
-      <div className="mt-16">{children}</div>
+      <div className="mt-20">{children}</div>
     </section>
   );
 }
@@ -733,7 +752,7 @@ function Footer() {
 
 export function Landing() {
   return (
-    <div className="relative min-h-screen overflow-x-hidden bg-[#1a1a1a] font-sans text-white antialiased">
+    <div className="relative min-h-screen overflow-x-hidden bg-[#0d0d0f] font-sans text-white antialiased">
       <MeshBackdrop />
       <GrainOverlay />
       <div className="relative z-10">
