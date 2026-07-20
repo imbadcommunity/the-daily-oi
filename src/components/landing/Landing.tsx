@@ -204,8 +204,8 @@ function Navbar() {
 
 function Eyebrow({ children }: { children: React.ReactNode }) {
   return (
-    <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 text-[11px] font-medium uppercase tracking-[0.2em] text-white/70 backdrop-blur-xl">
-      <span className="h-1 w-1 rounded-full bg-[#e85d3a]" />
+    <div className="inline-flex items-center gap-2.5 rounded-full border border-white/[0.08] bg-white/[0.02] px-3.5 py-1.5 text-[10px] font-light uppercase tracking-[0.32em] text-white/60 backdrop-blur-xl">
+      <span className="h-1 w-1 rounded-full bg-[#e85d3a]/80" />
       {children}
     </div>
   );
@@ -752,7 +752,7 @@ function Footer() {
 
 export function Landing() {
   return (
-    <div className="relative min-h-screen overflow-x-hidden bg-[#1a1a1a] font-sans text-white antialiased">
+    <div className="relative min-h-screen overflow-x-hidden bg-[#0d0d0f] font-sans text-white antialiased">
       <MeshBackdrop />
       <GrainOverlay />
       <div className="relative z-10">
