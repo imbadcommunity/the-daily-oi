@@ -743,9 +743,6 @@ export function Landing() {
         <main>
           <Hero />
           <Tools />
-          <About />
-          <Learn />
-          <Method />
           <Bonus />
           <Community />
           <ForWho />
