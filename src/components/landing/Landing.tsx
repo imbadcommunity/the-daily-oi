@@ -566,16 +566,15 @@ function Tools() {
 
 function _ForWho() {
   const items = [
-    "Quem quer aprender uma habilidade digital prática",
-    "Iniciantes interessados em IA e desenvolvimento",
-    "Freelancers",
-    "Designers",
-    "Empreendedores",
-    "Pessoas que desejam criar sites modernos",
-    "Quem busca estruturar projetos completos",
+    "Criadores que usam o Lovable no dia a dia",
+    "Freelancers em busca de novos clientes",
+    "Agências e estúdios digitais",
+    "Prestadores de serviço querendo prospectar leads",
+    "Devs indies buscando networking qualificado",
+    "Empreendedores que querem escalar operação",
   ];
   return (
-    <Section eyebrow="Público" title="Para quem é a Creators">
+    <Section eyebrow="Público" title="Para quem é feito">
       <div className="mx-auto grid max-w-3xl grid-cols-1 gap-3 sm:grid-cols-2">
         {items.map((it, i) => (
           <motion.div
@@ -599,16 +598,15 @@ function _ForWho() {
 
 function Differentials() {
   const items = [
-    "Aprendizado baseado em projetos reais",
-    "Conteúdo atualizado",
-    "Comunidade ativa",
-    "Foco em desenvolvimento prático",
-    "Orientação sobre estrutura completa dos projetos",
-    "Material organizado por etapas",
-    "Bônus exclusivo incluído",
+    "Lovable sem consumir créditos da plataforma",
+    "Prospecção automatizada com o LeadHunter",
+    "Networking direto com outros criadores",
+    "Ferramentas atualizadas continuamente",
+    "Acesso avulso ou incluso na comunidade",
+    "Ambiente ativo de troca de oportunidades",
   ];
   return (
-    <Section eyebrow="Diferenciais" title="O que diferencia a Creators">
+    <Section eyebrow="Diferenciais" title="Por que a Creators">
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
         {items.map((t, i) => (
           <motion.div
@@ -632,20 +630,20 @@ function Differentials() {
 function FAQ() {
   const items = [
     {
-      q: "Preciso saber programar?",
-      a: "O Lovable faz grande parte do trabalho, e a comunidade ensina como estruturar os projetos utilizando a ferramenta.",
+      q: "Preciso entrar na comunidade para usar as ferramentas?",
+      a: "Não. Você pode adquirir o acesso avulso ao LeadHunter e/ou à Extensão Lovable Ilimitado. Ao entrar na comunidade, ambos são incluídos sem custo adicional.",
     },
     {
-      q: "Como acesso o bônus?",
-      a: "Após entrar na comunidade, as instruções de acesso estarão disponíveis na área de membros.",
+      q: "Como funciona a Extensão Lovable Ilimitado?",
+      a: "É uma extensão que libera o uso do Lovable sem consumir os créditos da plataforma, permitindo trabalhar sem interrupção.",
     },
     {
-      q: "O conteúdo é atualizado?",
-      a: "Sim, novos conteúdos podem ser adicionados conforme a evolução das ferramentas e das práticas ensinadas.",
+      q: "O que é o LeadHunter?",
+      a: "Um prospectador que ajuda a encontrar leads qualificados de forma automatizada, acelerando a captação de clientes.",
     },
     {
       q: "Como funciona a comunidade?",
-      a: "Os membros têm acesso ao conteúdo, ao grupo de suporte para dúvidas e ao espaço de networking.",
+      a: "A Creators é um grupo de networking entre criadores. Os membros têm acesso ao grupo de suporte, ao espaço de networking e às ferramentas incluídas.",
     },
   ];
   return (
@@ -694,12 +692,12 @@ function FinalCTA() {
         <div className="relative">
           <Eyebrow>Comece agora</Eyebrow>
           <h2 className="mx-auto mt-6 max-w-3xl font-display text-4xl leading-[1.05] text-white md:text-6xl">
-            Comece hoje a desenvolver projetos profissionais utilizando{" "}
-            <em className="italic text-[#e85d3a]">IA</em>.
+            Entre para a Creators e acelere seus{" "}
+            <em className="italic text-[#e85d3a]">projetos</em>.
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-white/65">
-            Tenha acesso ao conteúdo da comunidade, aos materiais organizados, ao suporte e ao
-            bônus exclusivo da extensão Lovable Unlimited.
+            Acesso ao grupo de networking, à Extensão Lovable Ilimitado e ao LeadHunter — tudo
+            incluso na sua entrada.
           </p>
           <div className="mt-10 flex justify-center">
             <PrimaryCTA size="lg">Entrar para a Comunidade</PrimaryCTA>
