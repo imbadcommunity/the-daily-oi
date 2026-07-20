@@ -4,12 +4,7 @@ import creatorsLogo from "@/assets/creators-logo.png";
 import {
   ArrowRight,
   ArrowUpRight,
-  Layout,
   Sparkles,
-  Database,
-  Cloud,
-  Plug,
-  FolderTree,
   Check,
   Users,
   Network,
@@ -94,7 +89,7 @@ function PrimaryCTA({
 
 function GhostCTA({
   children,
-  href = "#aprende",
+  href = "#ferramentas",
   className = "",
 }: {
   children: React.ReactNode;
@@ -122,7 +117,6 @@ function Navbar() {
   }, []);
 
   const links = [
-    { href: "#aprende", label: "O que você aprende" },
     { href: "#ferramentas", label: "Ferramentas" },
     { href: "#bonus", label: "Bônus" },
     { href: "#comunidade", label: "Comunidade" },
@@ -207,29 +201,28 @@ function Hero() {
             <Sparkles size={11} /> Comunidade Creators
           </Eyebrow>
           <h1 className="mt-6 font-display text-[46px] leading-[1.02] tracking-tight text-white md:text-[68px]">
-            Aprenda a criar sites com{" "}
+            As ferramentas que aceleram seus projetos no{" "}
             <em className="not-italic bg-gradient-to-br from-[#e85d3a] to-[#f2a58a] bg-clip-text text-transparent">
-              IA
+              Lovable
             </em>{" "}
-            e transforme essa habilidade em um{" "}
-            <em className="italic text-[#e85d3a]">serviço</em>.
+            — e uma <em className="italic text-[#e85d3a]">comunidade</em> por trás.
           </h1>
           <p className="mt-7 max-w-xl text-[17px] leading-relaxed text-white/65">
-            Domine o Lovable do zero ao profissional, desenvolva aplicações completas com banco de
-            dados, publique seus projetos e aprenda uma metodologia prática para oferecer esse
-            serviço a empresas.
+            Extensão Lovable Ilimitado e LeadHunter, o prospectador de leads. Adquira cada
+            ferramenta separadamente ou entre para a comunidade Creators e receba ambas de graça,
+            junto ao grupo de networking.
           </p>
           <div className="mt-9 flex flex-wrap gap-3">
             <PrimaryCTA size="lg">Entrar para a Comunidade</PrimaryCTA>
-            <GhostCTA>Ver Conteúdo</GhostCTA>
+            <GhostCTA href="#ferramentas">Ver Ferramentas</GhostCTA>
           </div>
 
           <div className="mt-12 flex items-center gap-6 text-xs uppercase tracking-[0.2em] text-white/40">
-            <span>Lovable</span>
+            <span>Lovable Ilimitado</span>
             <span className="h-px flex-1 bg-white/10" />
-            <span>Supabase</span>
+            <span>LeadHunter</span>
             <span className="h-px flex-1 bg-white/10" />
-            <span>IA</span>
+            <span>Networking</span>
           </div>
         </motion.div>
 
@@ -276,14 +269,14 @@ function HeroCanvas() {
           <span className="h-2.5 w-2.5 rounded-full bg-white/20" />
         </div>
         <div className="mt-4 space-y-1.5 font-mono text-[11px] leading-relaxed">
-          <div className="text-white/40">// creators.tsx</div>
+          <div className="text-white/40">// lovable-ilimitado</div>
           <div className="text-[#f2a58a]">
-            const <span className="text-white">site</span> = createWith(
-            <span className="text-[#e85d3a]">"AI"</span>);
+            const <span className="text-white">credits</span> ={" "}
+            <span className="text-[#e85d3a]">"unlimited"</span>;
           </div>
-          <div className="text-white/40">// deploy em minutos</div>
+          <div className="text-white/40">// sem consumir créditos</div>
           <div className="text-[#f2a58a]">
-            await <span className="text-white">site.publish()</span>;
+            await <span className="text-white">lovable.run()</span>;
           </div>
           <div className="h-1.5 w-2/3 rounded bg-white/5" />
           <div className="h-1.5 w-1/2 rounded bg-white/5" />
@@ -297,7 +290,7 @@ function HeroCanvas() {
         style={{ boxShadow: "0 30px 60px -20px rgba(0,0,0,0.6)" }}
       >
         <div className="flex items-center justify-between">
-          <span className="text-xs font-medium text-white/90">Projetos</span>
+          <span className="text-xs font-medium text-white/90">Leads captados</span>
           <span className="rounded-full border border-[#e85d3a]/40 bg-[#e85d3a]/10 px-2 py-0.5 text-[10px] font-medium text-[#f2a58a]">
             Live
           </span>
@@ -324,11 +317,11 @@ function HeroCanvas() {
         style={{ boxShadow: "0 30px 60px -20px rgba(0,0,0,0.6)" }}
       >
         <div className="grid h-9 w-9 place-items-center rounded-lg bg-gradient-to-br from-[#e85d3a] to-[#6b3520] text-white ring-1 ring-white/10">
-          <Sparkles size={16} />
+          <Target size={16} />
         </div>
         <div>
-          <div className="text-xs font-medium text-white">Componente gerado</div>
-          <div className="text-[10px] text-white/50">via IA · pronto para publicar</div>
+          <div className="text-xs font-medium text-white">Novo lead qualificado</div>
+          <div className="text-[10px] text-white/50">via LeadHunter · pronto para contato</div>
         </div>
       </motion.div>
     </div>
@@ -365,154 +358,6 @@ function Section({
       </motion.div>
       <div className="mt-16">{children}</div>
     </section>
-  );
-}
-
-function About() {
-  return (
-    <Section
-      eyebrow="Sobre"
-      title={
-        <>
-          O que é a <em className="italic text-[#e85d3a]">Creators</em>
-        </>
-      }
-      description="Uma comunidade voltada para quem deseja aprender a criar sites e aplicações modernas utilizando inteligência artificial, com foco em projetos reais e desenvolvimento de habilidades práticas."
-    >
-      <motion.p {...fadeUp} className="mx-auto max-w-3xl text-center text-base leading-relaxed text-white/55">
-        O objetivo é reunir pessoas interessadas em evoluir, compartilhar conhecimento e construir
-        soluções profissionais.
-      </motion.p>
-    </Section>
-  );
-}
-
-const learnCards = [
-  {
-    icon: Layout,
-    title: "Sites profissionais",
-    items: ["Landing Pages", "Sites Institucionais", "Portfólios", "Páginas de vendas"],
-  },
-  {
-    icon: Sparkles,
-    title: "Lovable do Zero",
-    items: ["Estrutura", "Prompt Engineering", "Boas práticas", "Fluxos de desenvolvimento"],
-  },
-  {
-    icon: Database,
-    title: "Banco de Dados",
-    items: ["Supabase", "Autenticação", "CRUD", "Relacionamentos", "Boas práticas"],
-  },
-  {
-    icon: Cloud,
-    title: "Hospedagem",
-    items: ["Deploy", "Domínio", "SSL", "Publicação", "Versionamento"],
-  },
-  {
-    icon: Plug,
-    title: "Integrações",
-    items: ["WhatsApp", "Formulários", "APIs", "Automações"],
-  },
-  {
-    icon: FolderTree,
-    title: "Organização de Projetos",
-    items: ["Estrutura profissional", "Componentização", "Escalabilidade"],
-  },
-];
-
-function LearnCard({
-  icon: Icon,
-  title,
-  items,
-  index,
-}: {
-  icon: typeof Layout;
-  title: string;
-  items: string[];
-  index: number;
-}) {
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 24 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-60px" }}
-      transition={{ duration: 0.55, delay: index * 0.05, ease: easeOut }}
-      whileHover={{ y: -4 }}
-      className="group relative overflow-hidden rounded-2xl border border-white/8 bg-gradient-to-b from-white/[0.04] to-white/[0.01] p-7 backdrop-blur-xl"
-      style={{ boxShadow: "0 30px 60px -30px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.04)" }}
-    >
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0 opacity-[0.08]"
-        style={{ backgroundImage: `url("${GRAIN}")`, backgroundSize: "180px 180px" }}
-      />
-      <div className="relative">
-        <div className="mb-5 inline-flex h-11 w-11 items-center justify-center rounded-xl border border-[#e85d3a]/30 bg-gradient-to-br from-[#e85d3a]/20 to-transparent text-[#e85d3a] transition-all group-hover:scale-105">
-          <Icon size={20} />
-        </div>
-        <h3 className="font-display text-2xl leading-snug text-white">{title}</h3>
-        <ul className="mt-4 space-y-2">
-          {items.map((it) => (
-            <li key={it} className="flex items-center gap-2.5 text-sm text-white/60">
-              <span className="h-1 w-1 rounded-full bg-[#e85d3a]" />
-              {it}
-            </li>
-          ))}
-        </ul>
-      </div>
-    </motion.div>
-  );
-}
-
-function Learn() {
-  return (
-    <Section id="aprende" eyebrow="Conteúdo" title="O que você vai aprender">
-      <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
-        {learnCards.map((c, i) => (
-          <LearnCard key={c.title} {...c} index={i} />
-        ))}
-      </div>
-    </Section>
-  );
-}
-
-const steps = [
-  "Entender o Lovable",
-  "Criar interfaces profissionais",
-  "Adicionar funcionalidades",
-  "Conectar banco de dados",
-  "Publicar o projeto",
-  "Aprender como oferecer esse serviço para clientes",
-];
-
-function Method() {
-  return (
-    <Section eyebrow="Método" title="Do zero ao projeto entregue">
-      <div className="mx-auto max-w-3xl">
-        <ol className="relative border-l border-white/10 pl-8">
-          {steps.map((s, i) => (
-            <motion.li
-              key={s}
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-40px" }}
-              transition={{ duration: 0.5, delay: i * 0.05, ease: easeOut }}
-              className="relative mb-8 last:mb-0"
-            >
-              <span className="absolute -left-[41px] grid h-8 w-8 place-items-center rounded-full border border-[#e85d3a]/40 bg-[#1a1a1a] font-display text-sm text-[#e85d3a] ring-4 ring-[#1a1a1a]">
-                {i + 1}
-              </span>
-              <div className="rounded-xl border border-white/8 bg-white/[0.02] px-5 py-4 backdrop-blur-xl">
-                <div className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#e85d3a]/80">
-                  Passo {i + 1}
-                </div>
-                <div className="mt-1 font-display text-xl leading-snug text-white">{s}</div>
-              </div>
-            </motion.li>
-          ))}
-        </ol>
-      </div>
-    </Section>
   );
 }
 
@@ -721,16 +566,15 @@ function Tools() {
 
 function _ForWho() {
   const items = [
-    "Quem quer aprender uma habilidade digital prática",
-    "Iniciantes interessados em IA e desenvolvimento",
-    "Freelancers",
-    "Designers",
-    "Empreendedores",
-    "Pessoas que desejam criar sites modernos",
-    "Quem busca estruturar projetos completos",
+    "Criadores que usam o Lovable no dia a dia",
+    "Freelancers em busca de novos clientes",
+    "Agências e estúdios digitais",
+    "Prestadores de serviço querendo prospectar leads",
+    "Devs indies buscando networking qualificado",
+    "Empreendedores que querem escalar operação",
   ];
   return (
-    <Section eyebrow="Público" title="Para quem é a Creators">
+    <Section eyebrow="Público" title="Para quem é feito">
       <div className="mx-auto grid max-w-3xl grid-cols-1 gap-3 sm:grid-cols-2">
         {items.map((it, i) => (
           <motion.div
@@ -754,16 +598,15 @@ function _ForWho() {
 
 function Differentials() {
   const items = [
-    "Aprendizado baseado em projetos reais",
-    "Conteúdo atualizado",
-    "Comunidade ativa",
-    "Foco em desenvolvimento prático",
-    "Orientação sobre estrutura completa dos projetos",
-    "Material organizado por etapas",
-    "Bônus exclusivo incluído",
+    "Lovable sem consumir créditos da plataforma",
+    "Prospecção automatizada com o LeadHunter",
+    "Networking direto com outros criadores",
+    "Ferramentas atualizadas continuamente",
+    "Acesso avulso ou incluso na comunidade",
+    "Ambiente ativo de troca de oportunidades",
   ];
   return (
-    <Section eyebrow="Diferenciais" title="O que diferencia a Creators">
+    <Section eyebrow="Diferenciais" title="Por que a Creators">
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
         {items.map((t, i) => (
           <motion.div
@@ -787,20 +630,20 @@ function Differentials() {
 function FAQ() {
   const items = [
     {
-      q: "Preciso saber programar?",
-      a: "O Lovable faz grande parte do trabalho, e a comunidade ensina como estruturar os projetos utilizando a ferramenta.",
+      q: "Preciso entrar na comunidade para usar as ferramentas?",
+      a: "Não. Você pode adquirir o acesso avulso ao LeadHunter e/ou à Extensão Lovable Ilimitado. Ao entrar na comunidade, ambos são incluídos sem custo adicional.",
     },
     {
-      q: "Como acesso o bônus?",
-      a: "Após entrar na comunidade, as instruções de acesso estarão disponíveis na área de membros.",
+      q: "Como funciona a Extensão Lovable Ilimitado?",
+      a: "É uma extensão que libera o uso do Lovable sem consumir os créditos da plataforma, permitindo trabalhar sem interrupção.",
     },
     {
-      q: "O conteúdo é atualizado?",
-      a: "Sim, novos conteúdos podem ser adicionados conforme a evolução das ferramentas e das práticas ensinadas.",
+      q: "O que é o LeadHunter?",
+      a: "Um prospectador que ajuda a encontrar leads qualificados de forma automatizada, acelerando a captação de clientes.",
     },
     {
       q: "Como funciona a comunidade?",
-      a: "Os membros têm acesso ao conteúdo, ao grupo de suporte para dúvidas e ao espaço de networking.",
+      a: "A Creators é um grupo de networking entre criadores. Os membros têm acesso ao grupo de suporte, ao espaço de networking e às ferramentas incluídas.",
     },
   ];
   return (
@@ -849,12 +692,12 @@ function FinalCTA() {
         <div className="relative">
           <Eyebrow>Comece agora</Eyebrow>
           <h2 className="mx-auto mt-6 max-w-3xl font-display text-4xl leading-[1.05] text-white md:text-6xl">
-            Comece hoje a desenvolver projetos profissionais utilizando{" "}
-            <em className="italic text-[#e85d3a]">IA</em>.
+            Entre para a Creators e acelere seus{" "}
+            <em className="italic text-[#e85d3a]">projetos</em>.
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-white/65">
-            Tenha acesso ao conteúdo da comunidade, aos materiais organizados, ao suporte e ao
-            bônus exclusivo da extensão Lovable Unlimited.
+            Acesso ao grupo de networking, à Extensão Lovable Ilimitado e ao LeadHunter — tudo
+            incluso na sua entrada.
           </p>
           <div className="mt-10 flex justify-center">
             <PrimaryCTA size="lg">Entrar para a Comunidade</PrimaryCTA>
@@ -898,9 +741,6 @@ export function Landing() {
         <main>
           <Hero />
           <Tools />
-          <About />
-          <Learn />
-          <Method />
           <Bonus />
           <Community />
           <ForWho />
