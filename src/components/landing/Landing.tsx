@@ -368,14 +368,14 @@ function Section({
             <Eyebrow>{eyebrow}</Eyebrow>
           </div>
         )}
-        <h2 className="mt-5 font-display text-4xl leading-tight text-white md:text-5xl">
+        <h2 className="mt-6 font-display text-[36px] leading-[1.05] tracking-[-0.01em] text-white md:text-[52px]">
           {title}
         </h2>
         {description && (
-          <p className="mt-5 text-base leading-relaxed text-white/60">{description}</p>
+          <p className="mt-6 text-[15px] leading-relaxed font-light text-white/55">{description}</p>
         )}
       </motion.div>
-      <div className="mt-16">{children}</div>
+      <div className="mt-20">{children}</div>
     </section>
   );
 }
