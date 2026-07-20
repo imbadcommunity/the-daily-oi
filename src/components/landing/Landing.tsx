@@ -89,7 +89,7 @@ function PrimaryCTA({
 
 function GhostCTA({
   children,
-  href = "#aprende",
+  href = "#ferramentas",
   className = "",
 }: {
   children: React.ReactNode;
