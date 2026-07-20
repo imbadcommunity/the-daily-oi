@@ -146,7 +146,7 @@ function Navbar() {
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "border-b border-white/5 bg-[#1a1a1a]/70 backdrop-blur-2xl"
+          ? "border-b border-white/[0.06] bg-[#0d0d0f]/70 backdrop-blur-2xl"
           : "border-b border-transparent"
       }`}
     >
@@ -182,7 +182,7 @@ function Navbar() {
         </button>
       </div>
       {open && (
-        <div className="border-t border-white/5 bg-[#1a1a1a]/95 backdrop-blur-2xl md:hidden">
+        <div className="border-t border-white/[0.06] bg-[#0d0d0f]/95 backdrop-blur-2xl md:hidden">
           <div className="mx-auto flex max-w-6xl flex-col gap-4 px-6 py-5">
             {links.map((l) => (
               <a
