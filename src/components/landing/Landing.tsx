@@ -39,17 +39,36 @@ function GrainOverlay() {
 
 function MeshBackdrop() {
   return (
-    <div aria-hidden className="pointer-events-none fixed inset-0 -z-10 overflow-hidden bg-[#1a1a1a]">
+    <div aria-hidden className="pointer-events-none fixed inset-0 -z-10 overflow-hidden bg-[#0d0d0f]">
+      {/* Subtle technical grid */}
       <div
-        className="absolute -top-40 -left-40 h-[560px] w-[560px] rounded-full opacity-70 blur-[120px]"
+        className="absolute inset-0 opacity-[0.035]"
+        style={{
+          backgroundImage:
+            "linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px)",
+          backgroundSize: "64px 64px",
+          maskImage:
+            "radial-gradient(ellipse 90% 70% at 50% 30%, black 40%, transparent 90%)",
+        }}
+      />
+      {/* Vignette base */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            "radial-gradient(ellipse 100% 70% at 50% 0%, rgba(232,93,58,0.06) 0%, transparent 60%)",
+        }}
+      />
+      <div
+        className="absolute -top-40 -left-40 h-[560px] w-[560px] rounded-full opacity-25 blur-[140px]"
         style={{ background: "radial-gradient(circle, #e85d3a 0%, transparent 60%)" }}
       />
       <div
-        className="absolute top-1/3 -right-40 h-[640px] w-[640px] rounded-full opacity-50 blur-[140px]"
+        className="absolute top-1/3 -right-40 h-[640px] w-[640px] rounded-full opacity-[0.14] blur-[160px]"
         style={{ background: "radial-gradient(circle, #f2a58a 0%, transparent 60%)" }}
       />
       <div
-        className="absolute bottom-0 left-1/4 h-[520px] w-[520px] rounded-full opacity-40 blur-[140px]"
+        className="absolute bottom-0 left-1/4 h-[520px] w-[520px] rounded-full opacity-20 blur-[160px]"
         style={{ background: "radial-gradient(circle, #6b3520 0%, transparent 65%)" }}
       />
     </div>
