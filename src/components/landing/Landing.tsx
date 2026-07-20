@@ -219,14 +219,14 @@ function Hero() {
           <Eyebrow>
             <Sparkles size={11} /> Comunidade Creators
           </Eyebrow>
-          <h1 className="mt-6 font-display text-[46px] leading-[1.02] tracking-tight text-white md:text-[68px]">
+          <h1 className="mt-7 font-display text-[44px] leading-[1.03] tracking-[-0.015em] text-white md:text-[68px]">
             As ferramentas que aceleram seus projetos no{" "}
             <em className="not-italic bg-gradient-to-br from-[#e85d3a] to-[#f2a58a] bg-clip-text text-transparent">
               Lovable
             </em>{" "}
             — e uma <em className="italic text-[#e85d3a]">comunidade</em> por trás.
           </h1>
-          <p className="mt-7 max-w-xl text-[17px] leading-relaxed text-white/65">
+          <p className="mt-7 max-w-xl text-[16px] font-light leading-[1.7] text-white/60">
             Extensão Lovable Ilimitado e LeadHunter, o prospectador de leads. Adquira cada
             ferramenta separadamente ou entre para a comunidade Creators e receba ambas de graça,
             junto ao grupo de networking.
@@ -236,7 +236,7 @@ function Hero() {
             <GhostCTA href="#ferramentas">Ver Ferramentas</GhostCTA>
           </div>
 
-          <div className="mt-12 flex items-center gap-6 text-xs uppercase tracking-[0.2em] text-white/40">
+          <div className="mt-14 flex items-center gap-6 text-[10px] font-light uppercase tracking-[0.35em] text-white/35">
             <span>Lovable Ilimitado</span>
             <span className="h-px flex-1 bg-white/10" />
             <span>LeadHunter</span>
