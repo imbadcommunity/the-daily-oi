@@ -4,12 +4,7 @@ import creatorsLogo from "@/assets/creators-logo.png";
 import {
   ArrowRight,
   ArrowUpRight,
-  Layout,
   Sparkles,
-  Database,
-  Cloud,
-  Plug,
-  FolderTree,
   Check,
   Users,
   Network,
@@ -122,7 +117,6 @@ function Navbar() {
   }, []);
 
   const links = [
-    { href: "#aprende", label: "O que você aprende" },
     { href: "#ferramentas", label: "Ferramentas" },
     { href: "#bonus", label: "Bônus" },
     { href: "#comunidade", label: "Comunidade" },
@@ -207,29 +201,28 @@ function Hero() {
             <Sparkles size={11} /> Comunidade Creators
           </Eyebrow>
           <h1 className="mt-6 font-display text-[46px] leading-[1.02] tracking-tight text-white md:text-[68px]">
-            Aprenda a criar sites com{" "}
+            As ferramentas que aceleram seus projetos no{" "}
             <em className="not-italic bg-gradient-to-br from-[#e85d3a] to-[#f2a58a] bg-clip-text text-transparent">
-              IA
+              Lovable
             </em>{" "}
-            e transforme essa habilidade em um{" "}
-            <em className="italic text-[#e85d3a]">serviço</em>.
+            — e uma <em className="italic text-[#e85d3a]">comunidade</em> por trás.
           </h1>
           <p className="mt-7 max-w-xl text-[17px] leading-relaxed text-white/65">
-            Domine o Lovable do zero ao profissional, desenvolva aplicações completas com banco de
-            dados, publique seus projetos e aprenda uma metodologia prática para oferecer esse
-            serviço a empresas.
+            Extensão Lovable Ilimitado e LeadHunter, o prospectador de leads. Adquira cada
+            ferramenta separadamente ou entre para a comunidade Creators e receba ambas de graça,
+            junto ao grupo de networking.
           </p>
           <div className="mt-9 flex flex-wrap gap-3">
             <PrimaryCTA size="lg">Entrar para a Comunidade</PrimaryCTA>
-            <GhostCTA>Ver Conteúdo</GhostCTA>
+            <GhostCTA href="#ferramentas">Ver Ferramentas</GhostCTA>
           </div>
 
           <div className="mt-12 flex items-center gap-6 text-xs uppercase tracking-[0.2em] text-white/40">
-            <span>Lovable</span>
+            <span>Lovable Ilimitado</span>
             <span className="h-px flex-1 bg-white/10" />
-            <span>Supabase</span>
+            <span>LeadHunter</span>
             <span className="h-px flex-1 bg-white/10" />
-            <span>IA</span>
+            <span>Networking</span>
           </div>
         </motion.div>
 
@@ -276,14 +269,14 @@ function HeroCanvas() {
           <span className="h-2.5 w-2.5 rounded-full bg-white/20" />
         </div>
         <div className="mt-4 space-y-1.5 font-mono text-[11px] leading-relaxed">
-          <div className="text-white/40">// creators.tsx</div>
+          <div className="text-white/40">// lovable-ilimitado</div>
           <div className="text-[#f2a58a]">
-            const <span className="text-white">site</span> = createWith(
-            <span className="text-[#e85d3a]">"AI"</span>);
+            const <span className="text-white">credits</span> ={" "}
+            <span className="text-[#e85d3a]">"unlimited"</span>;
           </div>
-          <div className="text-white/40">// deploy em minutos</div>
+          <div className="text-white/40">// sem consumir créditos</div>
           <div className="text-[#f2a58a]">
-            await <span className="text-white">site.publish()</span>;
+            await <span className="text-white">lovable.run()</span>;
           </div>
           <div className="h-1.5 w-2/3 rounded bg-white/5" />
           <div className="h-1.5 w-1/2 rounded bg-white/5" />
@@ -297,7 +290,7 @@ function HeroCanvas() {
         style={{ boxShadow: "0 30px 60px -20px rgba(0,0,0,0.6)" }}
       >
         <div className="flex items-center justify-between">
-          <span className="text-xs font-medium text-white/90">Projetos</span>
+          <span className="text-xs font-medium text-white/90">Leads captados</span>
           <span className="rounded-full border border-[#e85d3a]/40 bg-[#e85d3a]/10 px-2 py-0.5 text-[10px] font-medium text-[#f2a58a]">
             Live
           </span>
@@ -324,11 +317,11 @@ function HeroCanvas() {
         style={{ boxShadow: "0 30px 60px -20px rgba(0,0,0,0.6)" }}
       >
         <div className="grid h-9 w-9 place-items-center rounded-lg bg-gradient-to-br from-[#e85d3a] to-[#6b3520] text-white ring-1 ring-white/10">
-          <Sparkles size={16} />
+          <Target size={16} />
         </div>
         <div>
-          <div className="text-xs font-medium text-white">Componente gerado</div>
-          <div className="text-[10px] text-white/50">via IA · pronto para publicar</div>
+          <div className="text-xs font-medium text-white">Novo lead qualificado</div>
+          <div className="text-[10px] text-white/50">via LeadHunter · pronto para contato</div>
         </div>
       </motion.div>
     </div>
