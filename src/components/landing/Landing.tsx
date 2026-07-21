@@ -136,9 +136,9 @@ function Navbar() {
   }, []);
 
   const links = [
-    { href: "#ferramentas", label: "Ferramentas" },
-    { href: "#bonus", label: "Bônus" },
+    { href: "#beneficios", label: "Benefícios" },
     { href: "#comunidade", label: "Comunidade" },
+    { href: "#publico", label: "Para quem é" },
     { href: "#faq", label: "FAQ" },
   ];
 
@@ -220,28 +220,28 @@ function Hero() {
             <Sparkles size={11} /> Comunidade Creators
           </Eyebrow>
           <h1 className="mt-7 font-display text-[44px] leading-[1.03] tracking-[-0.015em] text-white md:text-[68px]">
-            As ferramentas que aceleram seus projetos no{" "}
+            A <em className="italic text-[#e85d3a]">comunidade</em> dos criadores que constroem no{" "}
             <em className="not-italic bg-gradient-to-br from-[#e85d3a] to-[#f2a58a] bg-clip-text text-transparent">
               Lovable
-            </em>{" "}
-            — e uma <em className="italic text-[#e85d3a]">comunidade</em> por trás.
+            </em>
+            .
           </h1>
           <p className="mt-7 max-w-xl text-[16px] font-light leading-[1.7] text-white/60">
-            Extensão Lovable Ilimitado e LeadHunter, o prospectador de leads. Adquira cada
-            ferramenta separadamente ou entre para a comunidade Creators e receba ambas de graça,
-            junto ao grupo de networking.
+            Entre para a Creators e receba, sem custo adicional, acesso ao LeadHunter
+            (prospectador de leads), à Extensão Lovable Ilimitado e ao grupo de networking no
+            WhatsApp.
           </p>
           <div className="mt-9 flex flex-wrap gap-3">
             <PrimaryCTA size="lg">Entrar para a Comunidade</PrimaryCTA>
-            <GhostCTA href="#ferramentas">Ver Ferramentas</GhostCTA>
+            <GhostCTA href="#beneficios">Ver Benefícios</GhostCTA>
           </div>
 
           <div className="mt-14 flex items-center gap-6 text-[10px] font-light uppercase tracking-[0.35em] text-white/35">
-            <span>Lovable Ilimitado</span>
-            <span className="h-px flex-1 bg-white/10" />
             <span>LeadHunter</span>
             <span className="h-px flex-1 bg-white/10" />
-            <span>Networking</span>
+            <span>Lovable Ilimitado</span>
+            <span className="h-px flex-1 bg-white/10" />
+            <span>WhatsApp</span>
           </div>
         </motion.div>
 
@@ -382,7 +382,7 @@ function Section({
 
 function Bonus() {
   return (
-    <section id="bonus" className="mx-auto max-w-6xl px-6 py-24 md:py-32">
+    <section id="beneficios" className="mx-auto max-w-6xl px-6 py-24 md:py-32">
       <motion.div
         {...fadeUp}
         className="relative overflow-hidden rounded-[28px] border border-white/10 p-10 md:p-16"
@@ -406,22 +406,24 @@ function Bonus() {
         <div className="relative grid grid-cols-1 items-center gap-8 md:grid-cols-[1fr_auto]">
           <div>
             <span className="inline-flex items-center gap-1.5 rounded-full border border-[#e85d3a]/40 bg-[#e85d3a]/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-[#f2a58a]">
-              <Sparkles size={12} /> Bônus Exclusivo
+              <Sparkles size={12} /> Incluído na Comunidade
             </span>
             <h3 className="mt-5 font-display text-4xl leading-tight text-white md:text-5xl">
-              Tudo <em className="italic text-[#e85d3a]">incluído</em> na comunidade
+              Tudo <em className="italic text-[#e85d3a]">incluído</em> ao entrar
             </h3>
             <p className="mt-5 max-w-xl text-base leading-relaxed text-white/70">
-              Ao entrar na Creators, você recebe acesso gratuito ao{" "}
-              <span className="text-white">LeadHunter</span> (prospectador de leads) e à{" "}
-              <span className="text-white">Extensão Lovable Ilimitado</span> — sem custo
-              adicional, apenas por ser membro da comunidade.
+              Ao entrar na Creators você recebe, gratuitamente, acesso ao{" "}
+              <span className="text-white">LeadHunter</span> (prospectador de leads), à{" "}
+              <span className="text-white">Extensão Lovable Ilimitado</span> e ao{" "}
+              <span className="text-white">grupo de networking no WhatsApp</span> — sem custo
+              adicional, apenas por ser membro.
             </p>
             <ul className="mt-6 space-y-2.5">
               {[
-                "Acesso completo ao LeadHunter",
+                "LeadHunter — prospectador de leads liberado",
                 "Extensão Lovable Ilimitado sem consumo de créditos",
-                "Atualizações e novas ferramentas incluídas",
+                "Grupo de networking exclusivo no WhatsApp",
+                "Atualizações e novos recursos incluídos",
               ].map((b) => (
                 <li key={b} className="flex items-center gap-2.5 text-sm text-white/75">
                   <span className="grid h-5 w-5 place-items-center rounded-full border border-[#e85d3a]/40 bg-[#e85d3a]/15 text-[#e85d3a]">
@@ -432,7 +434,7 @@ function Bonus() {
               ))}
             </ul>
           </div>
-          <PrimaryCTA size="lg">Quero os bônus</PrimaryCTA>
+          <PrimaryCTA size="lg">Quero entrar</PrimaryCTA>
         </div>
       </motion.div>
     </section>
@@ -443,17 +445,17 @@ function Community() {
   const cards = [
     {
       icon: Users,
-      title: "Grupo de Suporte",
-      text: "Espaço dedicado para dúvidas técnicas, troca de conhecimento e auxílio durante o desenvolvimento dos projetos.",
+      title: "Grupo no WhatsApp",
+      text: "Canal ativo para dúvidas, troca de conhecimento e suporte no dia a dia dos projetos com o Lovable.",
     },
     {
       icon: Network,
-      title: "Networking VIP",
-      text: "Ambiente reservado para conectar desenvolvedores, compartilhar oportunidades, discutir projetos e criar parcerias profissionais.",
+      title: "Networking Qualificado",
+      text: "Conecte-se com outros criadores, compartilhe oportunidades, feche parcerias e evolua com quem também constrói.",
     },
   ];
   return (
-    <Section id="comunidade" eyebrow="Comunidade" title="Um ambiente para evoluir">
+    <Section id="comunidade" eyebrow="Comunidade" title="Networking entre criadores">
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
         {cards.map((c, i) => (
           <motion.div
@@ -488,101 +490,6 @@ function ForWho() {
   return _ForWho();
 }
 
-function Tools() {
-  const tools = [
-    {
-      icon: Target,
-      name: "LeadHunter",
-      description:
-        "Prospectador inteligente para encontrar leads qualificados e acelerar sua captação de clientes.",
-      href: "https://leadhuntercreators.lovable.app/",
-      cta: "Acessar LeadHunter",
-      badge: "Acesso avulso",
-    },
-    {
-      icon: Sparkles,
-      name: "Extensão Lovable Ilimitado",
-      description:
-        "Extensão que libera o uso ilimitado do Lovable, sem consumir créditos.",
-      href: "https://ilimitadolovable.lovable.app",
-      cta: "Acessar Ferramenta",
-      badge: "Acesso avulso",
-    },
-  ];
-  return (
-    <Section
-      id="ferramentas"
-      eyebrow="Ferramentas"
-      title="Ferramentas avulsas"
-      description="Não quer entrar na comunidade? Você também pode adquirir o acesso individual a cada uma das ferramentas."
-    >
-      <div className="mx-auto grid max-w-4xl grid-cols-1 gap-6 md:grid-cols-1">
-        {tools.map((t, i) => (
-          <motion.div
-            key={t.name}
-            initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-60px" }}
-            transition={{ duration: 0.6, delay: i * 0.06, ease: easeOut }}
-            className="relative overflow-hidden rounded-2xl border border-white/10 p-8 backdrop-blur-xl md:p-10"
-            style={{
-              background:
-                "linear-gradient(135deg, rgba(45,24,16,0.9) 0%, rgba(26,26,26,0.9) 60%, rgba(59,29,16,0.9) 100%)",
-              boxShadow:
-                "0 40px 90px -30px rgba(232,93,58,0.4), inset 0 1px 0 rgba(255,255,255,0.05)",
-            }}
-          >
-            <div
-              aria-hidden
-              className="pointer-events-none absolute inset-0 opacity-[0.1]"
-              style={{ backgroundImage: `url("${GRAIN}")`, backgroundSize: "200px 200px" }}
-            />
-            <div
-              aria-hidden
-              className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full opacity-50 blur-3xl"
-              style={{ background: "radial-gradient(circle, #e85d3a 0%, transparent 60%)" }}
-            />
-            <div className="relative flex flex-col items-start gap-6 md:flex-row md:items-center md:justify-between">
-              <div className="flex items-start gap-5">
-                <div className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl border border-[#e85d3a]/30 bg-gradient-to-br from-[#e85d3a]/25 to-transparent text-[#e85d3a]">
-                  <t.icon size={26} />
-                </div>
-                <div>
-                  <div className="flex items-center gap-2">
-                    <h3 className="font-display text-2xl leading-snug text-white md:text-3xl">
-                      {t.name}
-                    </h3>
-                    <span className="rounded-full border border-[#e85d3a]/40 bg-[#e85d3a]/10 px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-[0.18em] text-[#f2a58a]">
-                      {t.badge}
-                    </span>
-                  </div>
-                  <p className="mt-3 max-w-xl text-[15px] leading-relaxed text-white/65">
-                    {t.description}
-                  </p>
-                </div>
-              </div>
-              <a
-                href={t.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group relative inline-flex shrink-0 items-center justify-center gap-2 rounded-full bg-[#e85d3a] px-7 py-3.5 text-sm font-semibold text-[#1a1a1a] shadow-[0_20px_60px_-20px_rgba(232,93,58,0.7),inset_0_1px_0_rgba(255,255,255,0.35)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_28px_70px_-15px_rgba(232,93,58,0.8),inset_0_1px_0_rgba(255,255,255,0.45)]"
-              >
-                <span
-                  aria-hidden
-                  className="absolute inset-0 rounded-full opacity-70"
-                  style={{ background: "linear-gradient(180deg, rgba(255,255,255,0.25), transparent 40%)" }}
-                />
-                <span className="relative">{t.cta}</span>
-                <ArrowUpRight size={16} className="relative transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-              </a>
-            </div>
-          </motion.div>
-        ))}
-      </div>
-    </Section>
-  );
-}
-
 function _ForWho() {
   const items = [
     "Criadores que usam o Lovable no dia a dia",
@@ -593,7 +500,7 @@ function _ForWho() {
     "Empreendedores que querem escalar operação",
   ];
   return (
-    <Section eyebrow="Público" title="Para quem é feito">
+    <Section id="publico" eyebrow="Público" title="Para quem é feito">
       <div className="mx-auto grid max-w-3xl grid-cols-1 gap-3 sm:grid-cols-2">
         {items.map((it, i) => (
           <motion.div
@@ -617,12 +524,12 @@ function _ForWho() {
 
 function Differentials() {
   const items = [
-    "Lovable sem consumir créditos da plataforma",
-    "Prospecção automatizada com o LeadHunter",
-    "Networking direto com outros criadores",
-    "Ferramentas atualizadas continuamente",
-    "Acesso avulso ou incluso na comunidade",
-    "Ambiente ativo de troca de oportunidades",
+    "LeadHunter incluso — prospecção automatizada",
+    "Extensão Lovable Ilimitado sem consumir créditos",
+    "Grupo de WhatsApp ativo com criadores",
+    "Networking direto para parcerias e oportunidades",
+    "Suporte da comunidade no dia a dia",
+    "Novos recursos e ferramentas liberados aos membros",
   ];
   return (
     <Section eyebrow="Diferenciais" title="Por que a Creators">
@@ -649,8 +556,8 @@ function Differentials() {
 function FAQ() {
   const items = [
     {
-      q: "Preciso entrar na comunidade para usar as ferramentas?",
-      a: "Não. Você pode adquirir o acesso avulso ao LeadHunter e/ou à Extensão Lovable Ilimitado. Ao entrar na comunidade, ambos são incluídos sem custo adicional.",
+      q: "O que está incluído ao entrar na comunidade?",
+      a: "Ao entrar você recebe acesso gratuito ao LeadHunter, à Extensão Lovable Ilimitado e ao grupo de networking no WhatsApp — tudo incluído na assinatura da comunidade.",
     },
     {
       q: "Como funciona a Extensão Lovable Ilimitado?",
@@ -662,7 +569,7 @@ function FAQ() {
     },
     {
       q: "Como funciona a comunidade?",
-      a: "A Creators é um grupo de networking entre criadores. Os membros têm acesso ao grupo de suporte, ao espaço de networking e às ferramentas incluídas.",
+      a: "A Creators é um grupo de networking entre criadores no WhatsApp, com suporte contínuo e acesso incluído ao LeadHunter e à Extensão Lovable Ilimitado.",
     },
   ];
   return (
@@ -715,7 +622,7 @@ function FinalCTA() {
             <em className="italic text-[#e85d3a]">projetos</em>.
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-white/65">
-            Acesso ao grupo de networking, à Extensão Lovable Ilimitado e ao LeadHunter — tudo
+            Grupo de networking no WhatsApp, Extensão Lovable Ilimitado e LeadHunter — tudo
             incluso na sua entrada.
           </p>
           <div className="mt-10 flex justify-center">
@@ -759,7 +666,6 @@ export function Landing() {
         <Navbar />
         <main>
           <Hero />
-          <Tools />
           <Bonus />
           <Community />
           <ForWho />
