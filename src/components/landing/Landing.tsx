@@ -136,9 +136,9 @@ function Navbar() {
   }, []);
 
   const links = [
-    { href: "#ferramentas", label: "Ferramentas" },
-    { href: "#bonus", label: "Bônus" },
+    { href: "#beneficios", label: "Benefícios" },
     { href: "#comunidade", label: "Comunidade" },
+    { href: "#publico", label: "Para quem é" },
     { href: "#faq", label: "FAQ" },
   ];
 
@@ -220,28 +220,28 @@ function Hero() {
             <Sparkles size={11} /> Comunidade Creators
           </Eyebrow>
           <h1 className="mt-7 font-display text-[44px] leading-[1.03] tracking-[-0.015em] text-white md:text-[68px]">
-            As ferramentas que aceleram seus projetos no{" "}
+            A <em className="italic text-[#e85d3a]">comunidade</em> dos criadores que constroem no{" "}
             <em className="not-italic bg-gradient-to-br from-[#e85d3a] to-[#f2a58a] bg-clip-text text-transparent">
               Lovable
-            </em>{" "}
-            — e uma <em className="italic text-[#e85d3a]">comunidade</em> por trás.
+            </em>
+            .
           </h1>
           <p className="mt-7 max-w-xl text-[16px] font-light leading-[1.7] text-white/60">
-            Extensão Lovable Ilimitado e LeadHunter, o prospectador de leads. Adquira cada
-            ferramenta separadamente ou entre para a comunidade Creators e receba ambas de graça,
-            junto ao grupo de networking.
+            Entre para a Creators e receba, sem custo adicional, acesso ao LeadHunter
+            (prospectador de leads), à Extensão Lovable Ilimitado e ao grupo de networking no
+            WhatsApp.
           </p>
           <div className="mt-9 flex flex-wrap gap-3">
             <PrimaryCTA size="lg">Entrar para a Comunidade</PrimaryCTA>
-            <GhostCTA href="#ferramentas">Ver Ferramentas</GhostCTA>
+            <GhostCTA href="#beneficios">Ver Benefícios</GhostCTA>
           </div>
 
           <div className="mt-14 flex items-center gap-6 text-[10px] font-light uppercase tracking-[0.35em] text-white/35">
-            <span>Lovable Ilimitado</span>
-            <span className="h-px flex-1 bg-white/10" />
             <span>LeadHunter</span>
             <span className="h-px flex-1 bg-white/10" />
-            <span>Networking</span>
+            <span>Lovable Ilimitado</span>
+            <span className="h-px flex-1 bg-white/10" />
+            <span>WhatsApp</span>
           </div>
         </motion.div>
 
